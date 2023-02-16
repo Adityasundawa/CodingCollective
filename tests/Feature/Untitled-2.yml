@@ -1,0 +1,235 @@
+openapi: 3.0.0
+info:
+  title: CodingCollective
+  version: 1.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://app.swaggerhub.com/apis/ADITYASUNDAWACO/CodingCollective/1.0.0
+  - url: http://localhost:8000
+paths:
+  /api/register:
+    post:
+      tags:
+        - default
+      summary: register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: hrd
+                email: hrd@gmail.com
+                password: 'qwerty@'
+                c_password: 'qwerty@'
+                role_id: '2'
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/login:
+    post:
+      tags:
+        - default
+      summary: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: hrd@gmail.com
+                password: 'qwerty@'
+      parameters:
+        - name: typ
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/candidate:
+    get:
+      tags:
+        - default
+      summary: get all candidate
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNGE3YTg5MDQ2ZTUyNjQ5OWNmOGZlNmMwMmRiODQxM2Y4MTRhNGQ3YmVhZWFmMDEyOTIxMGFiNTI1NDQxMDM5ZDc3NjIzOGJiMGIyOTE3ODQiLCJpYXQiOjE2NzY1ODE0NDIuNTg5OTY2LCJuYmYiOjE2NzY1ODE0NDIuNTg5OTY5LCJleHAiOjE3MDgxMTc0NDIuNDcxMzQsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.rSeuUxKxorjaIm-96hoo67hd8Kt4hce874eFsxxRAQzUK3oK4VZqhMr0L2sfzUaWF6CcORUdd-ASA3MSl-aU3z6UwOkJluxpA4Qq8NFWnUwfoJlvRt1ABCcowtLaMNl4XioANLLy0bZkWyTaby8z1tjzNEruStLGgJ6EswM0id59NWrWpbqjkwVazmZWLWhpppe47fsXyN99JPtUoQNmfnRQPKrpkxvm95iSNlN2nmQhexhIspi5-jEriudDW6orQQ97hkadmVfix61kuowVEsdoQVsLNIIgMjreQDgvMNWGm_3GA4f71wQayA9y8JK2ed29as6Ar1rtfLR5ud9PBeujU1tzzPM8wzVLvcn7clPqc-eQwdU8ntRHAOY28d91QanFPJ0OoMi5PGuzYQIo8ZRHr4SKKDhvuZNC5Cf05srodvkeknQ5X8QNQhsG1Bc4-C7ym_K_ZEivux6OI1Ka25xWCLJaq7RephO6dANgIVXDkm2sBvV_5Gyj3m3m10dTPBFt1FleKIbujvHVoeZAkfkjVNb-CiBMJs5QnFCEyQKFXNPkouslN-fMscFgNBZynidqpcj-a5BgmgDFuvVugPaw1iT1butiCENVs7QuQ4bUCSKxmW8SVlWhCJu5VsXyIpJ64xw0Rf7_YbhgWb3279vUY5sbN2L-BEqsOrxYIqk
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/candidate/5:
+    get:
+      tags:
+        - default
+      summary: get candidate
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMzdlYTM1M2Y4NGNlYzAxMDE3ZWFmOGVmMDA0ZTE5M2Q3MGY1NWU0NjIyMjQ4ZmM5YWFjYTYwNTg5MmVjOTNiNDExNjhmOWIxZDNiYWI3OWIiLCJpYXQiOjE2NzUwMDA0OTkuMTM3NjM2LCJuYmYiOjE2NzUwMDA0OTkuMTM3NjQsImV4cCI6MTcwNjUzNjQ5OS4xMTY1ODMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.hTuYKkTjjobEtaAk7L97da1AHcEjyo9i9PzJcME1x1FHBk3mKeaqFrurDx7UESO7Z1TqLigckLv29xp9BzJpKcKR4BNwhPtRLet3tANbV5l2_5N9HoOklSGqdAmYL-Nxj2smoYQNuY56HvWWmjk0EsPLyApzQ_B8xT5WA3Nj3CDjL9pNxcGINuuzIYG8jPb9R55sWKMplkuo5bR28siYfUyhjcQnTbl658GYALS4R0WJ9jaAVv8jCG1JtSkQYdid1-Es4YHxSkArUqtp5A_7iuZgY0iDTV28mdJgPdoR6eCv6YyM94rgLZ8BE4QD0txmcawF5i6bOkD8FtH8sOGoRroQ2xxQidCRfzr8KH8uy4ulEy0oMBggSlplZFit4629FjxbHpSZmEk-68bpV0Yl2my0zIEW5ye0XvZxXkirtqGs3ZhdtoUm96_JNHeImv4Aq8TRssGCj83T7fsTWX6-aR96IC7pgTuNdxsa8xGr5_U_kHd6dCwQ0cVrtBJ2mcyUgF0LAr-s_4Jn2J2gUgktRy8Peeo_L_4F87TXqnVhz2MPl5tMnOdAiIqwIxENJdENYiTkAKOLQ7PVQVdZVmUv-1hUteAl_lUEYehVl7O1LAWmF3-ZgzcdWwzgm_zj2a67-DL66e9geSS3f3maPf-_ja4otEW9ko6x1cUTbPx54nI
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/candidate/:
+    post:
+      tags:
+        - default
+      summary: add candidate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: aditya sundawa
+                education: SMK
+                birthday: '2002-12-18'
+                experience: 4
+                last_position: backend
+                applied_position: programmer
+                skills: IT
+                email: aditya@gmail.com
+                phone: '06126172617'
+                resume: /C:/Users/Administrator/Downloads/Documents/Aditya+Sundawa+-+CV_2.pdf
+                created_at: '2023-01-29T11:59:19.000000Z'
+                updated_at: null
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMDViN2Q3ZTllOTFmMTQzYzg5ZTRkYzU2NzA5MGE2OTZjMTdhNDBhNGZhOTM2YTczYzU3ZGNhZjZjZDYxYzdlZjRhNmI1OTY4YmE5NmViM2IiLCJpYXQiOjE2NzUwMDIxNjEuMjE3Mjg0LCJuYmYiOjE2NzUwMDIxNjEuMjE3MjksImV4cCI6MTcwNjUzODE2MS4yMTMzMDUsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.C5JPNRmWJgmBorEqbu0AdhbNqcxe_QN1eagm_hJLKjCh5_o8uPVhN94ofJPJw2OEeV56Agvi4cLx48iOOc9H_jt3iC8eWHt-Q7NJnYJs5Y7UbUqqKi9Prisu5g7UtwjusQJaDnmux4RyABQLe88Uqra7Tbbg4nIVdzokmMIA_ClvhBnOs-e7RB1q2oBZzIKQb6UnSvccBjtzwf3RCMKYCp2MRveDXh96p_CI2_m5bAhI78fsX0J3u5shRnny1kuG72cI-HB1OcmH7uAqiBe2uUdTC_VbXsHpzSpxGlGuvXGwvI-7Q2Ci1smv9nMQ7GbwZE5vj6AKInYjQZ0I64lMcQT60UX4y1yQX0cZMSSrYmpretGevekrd8aGBLE4e4Ub7ZhR6JPXrIBT0c4VjOe3Yzg0orYzSEDhUXwnDyGBqa0FzfFC_1nRtP7Ygj5W0Hdc1dHYMldTbOY8nvbHCG26fTAXMzLqZB1ImfiY8kJicNxjWLIs_nJGtJTewKjN4-RStdjzs15UtrIeS1P81P9j3HJTIEC2VHpI_D84lVw5RRovC8Kg2VZ7ACB9NVs_PZHDfxJhpbKy8I_NsiOFcLSSnCdoMOduIsPYsv1-3snKjKSBLxy43iDmMvDnEVPD9c85VABnGXb4nhKVJi_2Cswp5CAY3HCsNXIqShSEchu64Ko
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/candidate/update/5:
+    put:
+      tags:
+        - default
+      summary: update candidate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: aditya sundawa
+                education: SMK
+                birthday: '2002-12-18'
+                experience: 4
+                last_position: backend
+                applied_position: programmer
+                skills: IT
+                email: aditya@gmail.com
+                phone: '06126172617'
+                resume: /C:/Users/Administrator/Downloads/Documents/Aditya+Sundawa+-+CV_2.pdf
+                created_at: '2023-01-29T11:59:19.000000Z'
+                updated_at: null
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNDM1ODc1MzkyYzY3MDg1YWJiOTQ0NTc0ZmMyNzE3MDE1MGRiOGU1MWY4MWRhMzAyNTE4MTExOGUzZTIyZjMwMzIyNWIwNGVlMDU4N2E0MTgiLCJpYXQiOjE2NzUwMDIwMzcuMDA5NzQ4LCJuYmYiOjE2NzUwMDIwMzcuMDA5NzUyLCJleHAiOjE3MDY1MzgwMzcuMDA2MjAxLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Af10i4ScXHRhM5L21pw6pVNAG9ppPb_FPet_Ed4Gu0AdiyWpIKcbiVrzpXMlj-FDgpLzble_DTH3fvA1q52KmxPCTxNUogI8JUASzFHEak9JBtrOXz7A6qVVTeLQP8xyBLnxiUJjOQPrX19nVbL70OtNLmk5_KZ36OqQhlATuZtkOKPi9WYqq0_znK4Tlhqk1tGs0C2Xxt9NOIHPWDpb7tDdM4dPB0__cvjMtJyFsi4Dg4ZdtiRAMOPOVG_P0DM6IzL-ZFPYx2ApGsMhyNz7WMmOJZWAWDXeCH-2J1EwdPQZf1LDMeWVz6UwcK2gtu61EGck8tlojfItX-EXhHy-v0OoJxMIQ9vcZOGMsnidD7vkoHXL0TZNH93rzruvGxQw7YVmBOh-kXCBqZUw7sqGeFXZEjkXk2smAqDfC5MKYbLfEFaxVwM7q_XH9MTSRSYDGvhM1ul7EFSH1vU5ZOMI3rYXNQDvZAwPTOVJTnFiCExpdN47SsRr4K0tIvCgVplheadC1VFckPwLEbAgIW2DPT71vDl4smx4-oE5XCD3WNKgNMqm1_NrNt0xRKOS30cfswvONyGbU1TH8Ql884C43goydaYA_1T2McgMQdpMkOJnIwo--mrftG2ZxBg7MW7oWnVDf0JBT_5ygkX3jNb-bKm7VkaZ3lHMqRhEG8mi7J0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/candidate/delete/3:
+    delete:
+      tags:
+        - default
+      summary: delete candidate
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMGU0MTZlNzliNGQwMWRmNzY0ZTEyYzFiYjM4ZDllYWZkYTA1YTVhM2JiZTc4NjA2OWQzN2IyNDc4MmYyYWJjMTFkYWI4YThjMDUwOTdiODkiLCJpYXQiOjE2NzUwMDI5OTIuMzE1ODM1LCJuYmYiOjE2NzUwMDI5OTIuMzE1ODM3LCJleHAiOjE3MDY1Mzg5OTIuMzEyNTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.HDRlmdf5xfqcBv38-cc6OgB4-Awx8t_QHCQzFfaGMjadt9TQN3Njiq7AwHmvq4ekFu-68Kti8b2-Z-oQbk8p9520g5ncfEZrgkWcBlkYhMNByl00XoOuDduTqe1MX8r2u1s9fdRgHMFHVKhrVDw4PQJ1nT5si9bDWM4TxK_KJ8gws-1Ce-OZBZLOy4TVAANMevHrkuj6sg2aKgU2T02QXPMHCUUUAoTxodUT_INqJaMG2Z1lrvu4hdTb2GRr6y1VHV5ugyCzyiPeyaUnFgfyA6jn8kTnvFeH-FuFfyLk8VKEwqrI2bBRUkMdRgb8SIwPJQNiHxX0vNv6mop8kDDoraga5ctV4gahJLimFe-DBtDfsJZeLwJOT3Wdd8HaI0lAC27kXrlDh54RdeedvMKrw3wr9U_caUyrg50oV7fD1xPA2vkWvjdaiCMmy9wryP5FdeCHH3bCbBcGrhNXIle7ahsbcgGLF6MOJokXyQrTvO1YRfVrHcO9_XscLaCzMzRk9mfjK2y2BZPzxRfS066hBRiYMz05wgCyc9uWN9_XVGxYHQ14kC1RjX0clgbi_jjnn31kVLi2NZt8XtAY0dtQId0ShIZPTHRwGBm3fqUg641hYYMmSnfINGS3AVHSBFJ0URTZL7na4wtOTsacNIXaSKO605ky-4s48CR9SjKW92c
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/logout:
+    get:
+      tags:
+        - default
+      summary: logout
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNGE3YTg5MDQ2ZTUyNjQ5OWNmOGZlNmMwMmRiODQxM2Y4MTRhNGQ3YmVhZWFmMDEyOTIxMGFiNTI1NDQxMDM5ZDc3NjIzOGJiMGIyOTE3ODQiLCJpYXQiOjE2NzY1ODE0NDIuNTg5OTY2LCJuYmYiOjE2NzY1ODE0NDIuNTg5OTY5LCJleHAiOjE3MDgxMTc0NDIuNDcxMzQsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.rSeuUxKxorjaIm-96hoo67hd8Kt4hce874eFsxxRAQzUK3oK4VZqhMr0L2sfzUaWF6CcORUdd-ASA3MSl-aU3z6UwOkJluxpA4Qq8NFWnUwfoJlvRt1ABCcowtLaMNl4XioANLLy0bZkWyTaby8z1tjzNEruStLGgJ6EswM0id59NWrWpbqjkwVazmZWLWhpppe47fsXyN99JPtUoQNmfnRQPKrpkxvm95iSNlN2nmQhexhIspi5-jEriudDW6orQQ97hkadmVfix61kuowVEsdoQVsLNIIgMjreQDgvMNWGm_3GA4f71wQayA9y8JK2ed29as6Ar1rtfLR5ud9PBeujU1tzzPM8wzVLvcn7clPqc-eQwdU8ntRHAOY28d91QanFPJ0OoMi5PGuzYQIo8ZRHr4SKKDhvuZNC5Cf05srodvkeknQ5X8QNQhsG1Bc4-C7ym_K_ZEivux6OI1Ka25xWCLJaq7RephO6dANgIVXDkm2sBvV_5Gyj3m3m10dTPBFt1FleKIbujvHVoeZAkfkjVNb-CiBMJs5QnFCEyQKFXNPkouslN-fMscFgNBZynidqpcj-a5BgmgDFuvVugPaw1iT1butiCENVs7QuQ4bUCSKxmW8SVlWhCJu5VsXyIpJ64xw0Rf7_YbhgWb3279vUY5sbN2L-BEqsOrxYIqk
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
