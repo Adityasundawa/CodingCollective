@@ -4,6 +4,16 @@ CRUD with Oauth2
 
 
 Note:
+
+
+Clone the repository
+
+    git clone https://github.com/Adityasundawa/CodingCollective
+
+Switch to the repo folder
+
+    cd CodingCollective
+
 Install all the dependencies using composer
 
     composer install
